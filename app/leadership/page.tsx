@@ -2,6 +2,14 @@ import { PageHero } from "@/components/content/page-hero";
 import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
 import { leadershipFocus } from "@/content/pages";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Leadership",
+  description: "Design leadership that creates clarity, confidence, and organizational momentum across complex product organizations.",
+  path: "/leadership",
+});
+
 
 export default function LeadershipPage() {
   return (

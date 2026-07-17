@@ -8,6 +8,14 @@ import { Section } from "@/components/layout/section";
 import { AnimatedReveal } from "@/components/ui/animated-reveal";
 import { Button } from "@/components/ui/button";
 import { impactAreas, impactNarratives, principles, valueAreas } from "@/content/home";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Product Design Leader",
+  description: "Executive product design leadership across strategy, facilitation, AI-enabled innovation, and measurable business impact.",
+  path: "/",
+});
+
 
 export default function Home() {
   return (

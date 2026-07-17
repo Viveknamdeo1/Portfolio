@@ -3,15 +3,12 @@ import type { ReactNode } from "react";
 import { Geist } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { createMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
-export const metadata: Metadata = {
-  title: "Product Design Leadership",
-  description:
-    "Executive product design leadership across strategy, facilitation, AI-enabled innovation, and measurable business impact.",
-};
+export const metadata: Metadata = createMetadata({ title: "Product Design Leader" });
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (

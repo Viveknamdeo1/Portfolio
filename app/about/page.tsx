@@ -2,6 +2,14 @@ import { ExecutiveStatement } from "@/components/content/executive-statement";
 import { PageHero } from "@/components/content/page-hero";
 import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "About",
+  description: "A product design leader focused on clarity, collaboration, and measurable business impact.",
+  path: "/about",
+});
+
 
 export default function AboutPage() {
   return (

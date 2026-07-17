@@ -2,6 +2,14 @@ import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/content/page-hero";
 import { Section } from "@/components/layout/section";
 import { insightTopics } from "@/content/pages";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Insights",
+  description: "Thinking on product design leadership, AI-enabled innovation, facilitation, design systems, and organizational alignment.",
+  path: "/insights",
+});
+
 
 export default function InsightsPage() {
   return (

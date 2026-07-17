@@ -3,6 +3,14 @@ import { PageHero } from "@/components/content/page-hero";
 import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
 import { impactAreas, impactNarratives } from "@/content/home";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Business Impact",
+  description: "Business-oriented design leadership focused on product clarity, organizational alignment, and measurable value.",
+  path: "/business-impact",
+});
+
 
 export default function BusinessImpactPage() {
   return (

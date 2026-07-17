@@ -2,6 +2,14 @@ import { PageHero } from "@/components/content/page-hero";
 import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
 import { approachSteps } from "@/content/pages";
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Approach",
+  description: "A structured approach to ambiguity, alignment, product framing, and execution.",
+  path: "/approach",
+});
+
 
 export default function ApproachPage() {
   return (
