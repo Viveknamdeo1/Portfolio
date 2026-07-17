@@ -1,4 +1,17 @@
 import { Mail } from "lucide-react";
-import { Section } from "@/components/layout/section";
+import { PageHero } from "@/components/content/page-hero";
 import { Button } from "@/components/ui/button";
-export default function ContactPage(){return <Section><p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-accent-primary">Contact</p><h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">Let’s talk about product clarity, design leadership, and business impact.</h1><p className="mt-8 max-w-3xl text-xl leading-8 text-foreground-secondary">Reach out for leadership opportunities, advisory conversations, product/design transformation, or facilitation work with executive and cross-functional teams.</p><div className="mt-10"><Button href="mailto:hello@example.com"><Mail className="mr-2 size-4" /> Start a conversation</Button></div></Section>}
+
+export default function ContactPage() {
+  return (
+    <PageHero
+      eyebrow="Contact"
+      title="Let’s talk about product clarity, design leadership, and business impact."
+      description="Reach out for leadership opportunities, advisory conversations, product/design transformation, or facilitation work with executive and cross-functional teams."
+    >
+      <Button href="mailto:hello@example.com">
+        <Mail className="mr-2 size-4" /> Start a conversation
+      </Button>
+    </PageHero>
+  );
+}

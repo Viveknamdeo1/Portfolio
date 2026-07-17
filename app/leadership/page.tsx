@@ -1,2 +1,29 @@
+import { PageHero } from "@/components/content/page-hero";
+import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
-export default function LeadershipPage(){return <Section><p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-accent-primary">Leadership</p><h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">Design leadership that creates clarity, confidence, and organizational momentum.</h1><p className="mt-8 max-w-3xl text-xl leading-8 text-foreground-secondary">I lead through strategy, facilitation, coaching, and partnership—building the conditions for teams to make better product decisions and deliver stronger customer outcomes.</p></Section>}
+import { leadershipFocus } from "@/content/pages";
+
+export default function LeadershipPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Leadership"
+        title="Design leadership that creates clarity, confidence, and organizational momentum."
+        description="I lead through strategy, facilitation, coaching, and executive partnership—building the conditions for teams to make better product decisions and deliver stronger customer outcomes."
+      />
+      <Section className="border-t border-border-subtle bg-background-secondary">
+        <SectionHeading
+          title="What leadership looks like in practice"
+          description="The role is to connect ambition to execution while helping teams improve the quality of their decisions."
+        />
+        <div className="mt-12 grid gap-px overflow-hidden border border-border-subtle bg-border-subtle md:grid-cols-2">
+          {leadershipFocus.map((item) => (
+            <div key={item} className="bg-background-secondary p-8 text-lg leading-8 text-foreground-secondary">
+              {item}
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
+  );
+}

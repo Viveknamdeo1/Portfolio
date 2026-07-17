@@ -1,2 +1,40 @@
+import { ImpactNarrative } from "@/components/content/impact-narrative";
+import { PageHero } from "@/components/content/page-hero";
+import { SectionHeading } from "@/components/content/section-heading";
 import { Section } from "@/components/layout/section";
-export default function BusinessImpactPage(){return <Section><p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-accent-primary">Business Impact</p><h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] sm:text-6xl">Connecting design leadership to measurable business value.</h1><p className="mt-8 max-w-3xl text-xl leading-8 text-foreground-secondary">The most valuable design work improves product clarity, reduces organizational drag, increases adoption, strengthens trust, and helps teams invest in the right opportunities.</p></Section>}
+import { impactAreas, impactNarratives } from "@/content/home";
+
+export default function BusinessImpactPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Business Impact"
+        title="Connecting design leadership to measurable business value."
+        description="The most valuable design work improves product clarity, reduces organizational drag, increases adoption, strengthens trust, and helps teams invest in the right opportunities."
+      />
+      <Section className="border-t border-border-subtle bg-background-secondary">
+        <SectionHeading title="Impact is created through decisions, systems, and alignment." />
+        <div className="mt-12 grid gap-px overflow-hidden border border-border-subtle bg-border-subtle md:grid-cols-2">
+          {impactAreas.map((item) => (
+            <article key={item.title} className="bg-background-secondary p-8 sm:p-10">
+              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-foreground-primary">
+                {item.title}
+              </h2>
+              <p className="mt-5 leading-7 text-foreground-secondary">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+      <Section>
+        <SectionHeading
+          eyebrow="Narratives"
+          title="Examples of business-oriented design leadership"
+          description="Instead of presenting isolated screens, these narratives focus on the leadership work that changes outcomes."
+        />
+        <div className="mt-12">
+          <ImpactNarrative items={impactNarratives} />
+        </div>
+      </Section>
+    </>
+  );
+}
